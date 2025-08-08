@@ -1,0 +1,75 @@
+{
+  "name": "meeting-scheduler-mcp",
+  "displayName": "Meeting Scheduler MCP",
+  "description": "VS Code extension to interact with the Meeting Scheduler MCP server",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:meetingScheduler.scheduleMeeting",
+    "onCommand:meetingScheduler.listMeetings",
+    "onCommand:meetingScheduler.checkAvailability"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "meetingScheduler.scheduleMeeting",
+        "title": "Schedule Meeting",
+        "category": "Meeting Scheduler"
+      },
+      {
+        "command": "meetingScheduler.listMeetings",
+        "title": "List Meetings",
+        "category": "Meeting Scheduler"
+      },
+      {
+        "command": "meetingScheduler.checkAvailability",
+        "title": "Check Availability",
+        "category": "Meeting Scheduler"
+      },
+      {
+        "command": "meetingScheduler.extractMeetingDetails",
+        "title": "Extract Meeting Details",
+        "category": "Meeting Scheduler"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "meetingScheduler.scheduleMeeting"
+        },
+        {
+          "command": "meetingScheduler.listMeetings"
+        },
+        {
+          "command": "meetingScheduler.checkAvailability"
+        },
+        {
+          "command": "meetingScheduler.extractMeetingDetails"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "meetingScheduler.scheduleMeeting",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "16.x",
+    "typescript": "^4.9.4"
+  }
+}

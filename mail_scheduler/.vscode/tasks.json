@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Start MCP Server",
+      "type": "shell",
+      "command": "npm start",
+      "group": "build",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Dev MCP Server",
+      "type": "shell",
+      "command": "npm run dev",
+      "group": "test",
+      "problemMatcher": [],
+      "isBackground": true
+    },
+    {
+      "label": "Compile Extension",
+      "type": "npm",
+      "script": "compile",
+      "path": "vscode-extension/",
+      "group": "build",
+      "presentation": {
+        "reveal": "silent"
+      },
+      "problemMatcher": "$tsc"
+    }
+  ]
+}

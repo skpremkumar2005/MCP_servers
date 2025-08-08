@@ -1,0 +1,24 @@
+{
+  "name": "meeting-scheduler-mcp-server",
+  "version": "1.0.0",
+  "description": "A meeting scheduler MCP server with Gemini Flash API and calendar integration.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "node test-mcp.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.8",
+    "google-auth-library": "^9.6.3",
+    "googleapis": "^132.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
